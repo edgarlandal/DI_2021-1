@@ -13,14 +13,13 @@ public class NewBehaviourScript : MonoBehaviour
         printArray(array1);
         printArray(array2);
         arrayNumMax(array1,array2);
-        printArray(array1);
-        printArray(array2);
+        printArray(array1,array2);
     }
 
     int[] arrayNumMax(int[] array1, int[] array2){
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < array1.Length; i++)
         {
-            for (int j = 0; j < 6; j++)
+            for (int j = 0; j < array2.Length; j++)
             {
                 if (array1[i]> array1[j])
                 {
@@ -36,6 +35,13 @@ public class NewBehaviourScript : MonoBehaviour
         for (int i = 0; i < 6; i++)
         {
             Debug.Log(array[i]);
+        }
+    }
+
+    void printArray(int[] array1, int[] array2){
+        for (int i = 0; i < 6; i++)
+        {
+            Debug.Log(array1[i]+" = "+ array2[i]);
         }
     }
 
