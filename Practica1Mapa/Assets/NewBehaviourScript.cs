@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
@@ -9,9 +10,17 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string respuesta = "Edgar";
+        Stopwatch timeMeasure = new Stopwatch();
+        timeMeasure.Start();      
+        string respuesta = "Juan";
+        UnityEngine.Debug.Log(estaAlumno(alumnos,respuesta));
+        respuesta = "Valeria";
+        UnityEngine.Debug.Log(estaAlumno(alumnos,respuesta));
+        respuesta = "Edgar";
+        UnityEngine.Debug.Log(estaAlumno(alumnos,respuesta));
 
-        Debug.Log(estaAlumno(alumnos,respuesta));
+        UnityEngine.Debug.Log("Tiempo es :"+timeMeasure.Elapsed.TotalMilliseconds + " ms");
+        timeMeasure.Stop();
     }
 
     public bool estaAlumno(string [] alumnos, string name){
