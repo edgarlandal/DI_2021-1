@@ -31,19 +31,13 @@ public class Pratica3 : MonoBehaviour
     int[] buscar(int[] array){
         int[] array2 = new int[2];
         for (int i = 0; i < array.Length; i++)
-        {
             for (int j = 0; j < array.Length; j++)
-            {
                 if (i != j)
-                {
                     if((array[i] + array[j]) == target){
                         array2[0] = i;
                         array2[1] = j;
                         return array2;
                     }
-                }
-            }
-        }
         return array2;
     }
 }
