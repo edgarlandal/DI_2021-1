@@ -4,33 +4,37 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    static protected Inventory s_InventoryInstance;
+    static public Inventory InventoryInstance { get { return s_InventoryInstance; } }
     public int space = 10;
+    public List<Item> items = new List<Item>();
 
-    public List<GameObject> items =  new List<GameObject>();
-
-
-    public void Awake() {
+    void Awake()
+    {
         s_InventoryInstance = this;
     }
-    
-    public void Add(GameObject newItem){
-        
+
+    public void Add(Item newItem)
+    {
         if (items.Count < space)
         {
-            items.Add(newItem);            
-        }else
+            items.Add(newItem);
+        }
+        else
         {
-            Debug.Log("no hay item");
+            Debug.Log("No hay espacio disponible");
         }
     }
 
-    public void Remove(GameObject itemToRemove){
+    public void Remove(Item itemToRemove)
+    {
         if (items.Contains(itemToRemove))
         {
             items.Remove(itemToRemove);
-        }else
+        }
+        else
         {
-            Debug.Log("No hay item");
+            Debug.Log("No esta el item");
         }
     }
 }

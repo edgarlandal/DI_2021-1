@@ -14,7 +14,7 @@ public class Pelota : Interactable
 
     void Start()
     {
-        // Debug.Log("Hola crayola!");
+        
         rb = GetComponent<Rigidbody>();
     }
 
@@ -29,6 +29,7 @@ public class Pelota : Interactable
         intensity = 2 * Mathf.PI * magnusScale;
         Vector3 magnus = Vector3.Cross(velocity, angularVelocity * intensity);
         rb.AddForce(magnus);
+        
     }
 
     public override void Interact()

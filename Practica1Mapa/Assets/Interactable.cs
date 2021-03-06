@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-
     public bool isInsideZone = false;
     public KeyCode interactionKey = KeyCode.P;
     
@@ -50,5 +49,5 @@ public class Interactable : MonoBehaviour
     public virtual void Interact()
     {
 
-    }
+    }    
 }
