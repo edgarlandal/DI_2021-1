@@ -2,7 +2,7 @@
 
 public enum ItemType
 {
-    Equip, Weapon, Medicine
+    Equip, Weapon, Medicine, Books
 }
 
 [CreateAssetMenu(fileName= "New Item", menuName="Inventory/Generic")]

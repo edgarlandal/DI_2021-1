@@ -12,7 +12,6 @@ public class InventoryUI : MonoBehaviour
         _inventory.onChange += UpdateUI;
     }
 
-    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.I))
