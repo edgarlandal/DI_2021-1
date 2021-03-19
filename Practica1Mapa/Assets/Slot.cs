@@ -18,17 +18,17 @@ public class Slot : MonoBehaviour
         
     }
 
-    public void SetItem(Item item, int count)
+    public void SetItem(Item item)
     {
         this.item = item;
-        counter = count;
+        // counter = count;
         if(image != null)
         {
             image.enabled = true;
             image.sprite = item.icon;
         }
-        if(counterText != null)  
-            counterText.text = counter.ToString();
+        // if(counterText != null)  
+        //     counterText.text = counter.ToString();
     }
 
     public void Clear()

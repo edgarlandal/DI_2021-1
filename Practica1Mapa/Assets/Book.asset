@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b2861ee04e7fd24ca1481f061248a07, type: 3}
   m_Name: Book
   m_EditorClassIdentifier: 
-  itemType: 0
-  icon: {fileID: -6116107895237960976, guid: 74d38b675fd267541811bf6350eaa9cb, type: 3}
+  itemType: 3
+  icon: {fileID: 7288376272904273037, guid: 74d38b675fd267541811bf6350eaa9cb, type: 3}

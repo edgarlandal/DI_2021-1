@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/FightingUnityChan_FreeAsset/FightingUnityChan_FreeAsset/Scene/FUCMAnimationPreviewFree.unity
-    guid: b42c87fc5c1a9c94e9375c31774edaf9
+    path: Assets/Game.unity
+    guid: 4dc801d0fd987c241866382beeae3bcc
   m_configObjects: {}

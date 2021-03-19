@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName= "First Book", menuName="Inventory/Medicine")]
+[CreateAssetMenu(fileName= "First Book", menuName="Inventory/Books")]
 public class Book : Item
 {
     

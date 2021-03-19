@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName= "New Potion", menuName="Inventory/Medicine")]
+
 public class Potion : Item
 {
     public float lifeAmount = 5.0f;

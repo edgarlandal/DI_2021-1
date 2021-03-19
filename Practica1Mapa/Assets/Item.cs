@@ -8,7 +8,7 @@ public enum ItemType
 [CreateAssetMenu(fileName= "New Item", menuName="Inventory/Generic")]
 public class Item : ScriptableObject
 {
-    public ItemType itemType = ItemType.Equip;
+    public ItemType itemType = ItemType.Books;
     public Sprite icon = null;
 
     public virtual void Use()
