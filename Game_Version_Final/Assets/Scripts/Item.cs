@@ -1,18 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Item : MonoBehaviour
+public enum ItemType
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    Equip, Weapon, Medicine, Books, Yugioh
+}
 
-    // Update is called once per frame
-    void Update()
+[CreateAssetMenu(fileName= "New Item", menuName="Inventory/Generic")]
+public class Item : ScriptableObject
+{
+    public ItemType itemType = ItemType.Books;
+    public Sprite icon = null;
+
+    public virtual void Use()
     {
-        
+        Debug.Log($"Usando item {name}");
     }
 }

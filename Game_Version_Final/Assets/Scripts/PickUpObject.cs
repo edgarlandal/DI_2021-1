@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpObject : MonoBehaviour
+//añadir objeto al inventario
+public class PickUpObject : Interactable
 {
-    // Start is called before the first frame update
-    void Start()
+    public Item item;
+    public override void Interact()
     {
-        
+        // base.Interact();
+        // refer al invetario, llamar metodo de insert
+        Inventory.InventoryInstance.Add(item);
+        // Destroy(this.gameObject);
+        gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

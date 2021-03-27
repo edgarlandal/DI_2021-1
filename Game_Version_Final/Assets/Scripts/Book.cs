@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Book : MonoBehaviour
+[CreateAssetMenu(fileName= "First Book", menuName="Inventory/Books")]
+public class Book : Item
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    public override void Use()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        base.Use();
+        // subirme la vida
+        Debug.Log($"Hola bienvenido a Dilhevia");
     }
 }
