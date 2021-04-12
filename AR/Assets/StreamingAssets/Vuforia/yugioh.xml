@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Elemental_Hero_Neos" size="0.200000 0.290323" />
+    <ImageTarget name="Dark_Magicia_Girl" size="1.000000 1.465798" />
+  </Tracking>
+</QCARConfig>

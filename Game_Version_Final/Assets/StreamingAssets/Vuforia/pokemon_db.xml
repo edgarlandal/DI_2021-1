@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="Dark_Magician_Girl" size="0.200000 0.293160" />
+    <ImageTarget name="Dark_Magician" size="0.200000 0.278638" />
     <ImageTarget name="red_demons" size="0.200000 0.292353" />
     <ImageTarget name="1681860" size="0.200000 0.289389" />
     <ImageTarget name="red_eyes" size="0.200000 0.294966" />
