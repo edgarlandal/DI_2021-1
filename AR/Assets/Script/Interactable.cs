@@ -1,20 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Interactable : MonoBehaviour
 {
     public bool isInsideZone = false;
-    public KeyCode interactionKey = KeyCode.P;
+    public bool gazedAt = false;
+
+    public float gazeInteractTime = 2f;
+    public float gazeTimer = 0;
+    // public KeyCode interactionKey = KeyCode.P;
+    public string interactionButton = "Interact";
     
     /// <summary>
     /// Update is called every frame, if the MonoBehaviour is enabled.
     /// </summary>
     public virtual void Update()
     {
-        if (isInsideZone && Input.GetKeyDown(interactionKey))
+        // if (isInsideZone && Input.GetKeyDown(interactionKey))
+        if (isInsideZone && CrossPlatformInputManager.GetButtonDown(interactionButton))
         {
             Interact();
+        }
+        if (gazedAt)
+        {
+            if ((gazeTimer += Time.deltaTime) >= gazeInteractTime)
+            {
+                Interact();
+                gazedAt = false;
+                gazeTimer = 0f;
+            }
         }
     }
 
@@ -30,6 +46,24 @@ public class Interactable : MonoBehaviour
         }
         Debug.Log("Entró en el área");
         isInsideZone = true;
+    }
+
+    // /// <summary>
+    // /// OnMouseDown is called when the user has pressed the mouse button while
+    // /// over the GUIElement or Collider.
+    // /// </summary>
+    // void OnMouseDown()
+    // {
+    //     Interact();
+    // }
+
+    public void SetGazedAt(bool gazedAt)
+    {
+        this.gazedAt = gazedAt;
+        if (!gazedAt)
+        {
+            gazeTimer = 0f;
+        }
     }
 
     /// <summary>
@@ -49,11 +83,5 @@ public class Interactable : MonoBehaviour
     public virtual void Interact()
     {
 
-    }
-
-    // void OnMouseDown()
-    // {
-    //      // this object was clicked - do something
-    //      Interact();
-    // }     
+    }    
 }
